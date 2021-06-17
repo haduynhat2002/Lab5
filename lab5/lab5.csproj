@@ -38,7 +38,12 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Exercise2\Ex2.cs" />
+        <Compile Include="Exercise2\AmountException.cs" />
+        <Compile Include="Exercise2\HighSchoolTeacher.cs" />
+        <Compile Include="Exercise2\IEmployeeAction.cs" />
+        <Compile Include="Exercise2\Person.cs" />
+        <Compile Include="Exercise2\Program.cs" />
+        <Compile Include="Exercise2\UniversityTeacher.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

@@ -44,43 +44,32 @@ namespace lab5
             // }
             
             //Ex2
-            Console.WriteLine("vui lòng nhập tên");
-            var name = Console.ReadLine();
-            Console.WriteLine("vui lòng nhập salary");
-            var salary = double.Parse(Console.ReadLine());
-            Console.WriteLine("vui lòng nhập bonus");
-            var bonus = double.Parse(Console.ReadLine());
-            var seniorLecture = new Ex2.SeniorLecture
+            var highSchoolTeacher = new HighSchoolTeacher
             {
-                Name = name,
-                Salary = salary,
-                Bonus = bonus
+                IdentityNumber = "A001",
+                FullName = "Nhat Ha Duy",
+                BaseSalary = 100,
+                SkillLever =  1,
+                SeniorLecture = 60000,
+                Bonus = 1000,
+                HighSchoolTeacherCode = "TEACHER001"
             };
-            try
+            var universityTeacher = new UniversityTeacher
             {
-                CheckAmount(seniorLecture);
-            }
-            catch (Ex2.AmountException e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+                IdentityNumber = "A002",
+                FullName = "Ha Duy Nhat",
+                BaseSalary = 100,
+                SkillLever =  1,
+                SeniorLecture = 30000,
+                Bonus = 9000,
+                UniversityTeacherCode = "UNIVERSITY_TEACHER002",
+                EnglishSkillLever = 2
+            };
+            Console.WriteLine(highSchoolTeacher.CalculateSalary());
+            Console.WriteLine(universityTeacher.CalculateSalary());
+            
         }
-        public static void CheckAmount(Ex2.SeniorLecture seniorLecture)
-        {
-            if (seniorLecture.Salary < 60000)
-            {
-                throw new Ex2.AmountException($"mức lương của giảng viên {seniorLecture.Name} tối thiểu phải từ 60000");
-            }
-            else if(seniorLecture.Bonus > 10000)
-            {
-                throw new Ex2.AmountException($"mức thưởng của giảng viên {seniorLecture.Name} tối đa không quá 10000");
-            }
-            else
-            {
-                Console.WriteLine("ok");
-            }
-        }
+        
 
         //Ex1
         public static void ShowMenu()
